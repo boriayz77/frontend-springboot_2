@@ -1,0 +1,29 @@
+<!--диалоговое окно настроек приложения-->
+
+<mat-dialog-content>
+
+  <p mat-dialog-title class="settings-title with-subtitle">Настройка приоритетов</p>
+  <p></p>
+
+  <!--  список приоритетов с цветами-->
+  <app-priorities
+    [priorities]="priorities"
+    (addPriority)="addPriority($event)"
+    (deletePriority)="deletePriority($event)"
+    (updatePriority)="updatePriority($event)"
+
+  >
+
+  </app-priorities>
+
+
+</mat-dialog-content>
+
+<!--  кнопки возможных действий-->
+<mat-dialog-actions>
+
+  <button mat-raised-button color="primary" (click)="close()">Закрыть</button>
+
+
+</mat-dialog-actions>
+
